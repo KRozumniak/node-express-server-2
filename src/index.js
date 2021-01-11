@@ -1,23 +1,19 @@
 import express from 'express';
+import home from './home';
+import info from './info';
+import errorHandler from './errorHandler';
+import logger from './logger';
 
 const app = express();
 const PORT = 5000;
 
 //localhost:5000
 
-app.get('/', home);
-app.get('/info', info);
+app.get('/', home); // GET localhost:5000/
+app.post('/info', info); // POST localhost:5000/info
+logger(app);
 
-function home(req, res) {
-  res.send('PASV---');
-}
-
-function info(req, res) {
-  const a = 123;
-  const b = Math.random();
-  const c = a + b;
-  res.send('INFO here' + c);
-}
+errorHandler(app);
 
 app.listen(PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`);
