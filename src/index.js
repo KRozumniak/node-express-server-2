@@ -17,9 +17,6 @@ parseResponse(app);
 cors(app);
 routes(app);
 
-// app.get('/', home); // GET localhost:5000/
-// app.post('/info', info); // POST localhost:5000/info
-
 errorHandler(app);
 
 app.listen(PORT, () => {
