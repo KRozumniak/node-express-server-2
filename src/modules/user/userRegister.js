@@ -6,7 +6,13 @@ export default function userRegister(req, res) {
     password: req.body.password,
   });
 
-  newUser.save();
-
-  res.status(200).json('userRegister here');
+  newUser
+    .save()
+    .then(() => {
+      res.status(200).json('User created');
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(200).json('User not created');
+    });
 }
