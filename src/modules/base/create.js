@@ -4,6 +4,7 @@ export default function create(req, res) {
   const newBase = new Base({
     name: req.body.name,
     password: req.body.password,
+    email: req.body.email,
   });
 
   newBase
