@@ -10,9 +10,9 @@ const router = Router();
 
 router.post('/', create); // POST localhost:5000/base
 router.get('/', getAll); // GET localhost:5000/base
-router.get('/:baseId', baseGetById); // GET localhost:5000/base/:
-router.patch('/:baseId', baseUpdateById); // GET localhost:5000/base/:
-router.delete('/', baseDeleteAll); // GET localhost:5000/base/:
-router.delete('/:baseId', baseDeleteById); // GET localhost:5000/base/:
+router.get('/:baseId', baseGetById); // GET localhost:5000/base/:baseId
+router.patch('/:baseId', baseUpdateById); // PATCH localhost:5000/base/:baseId
+router.delete('/', baseDeleteAll); // DELETE localhost:5000/base/
+router.delete('/:baseId', baseDeleteById); // DELETE localhost:5000/base/:baseId
 
 export default router;
