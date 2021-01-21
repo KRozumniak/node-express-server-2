@@ -1,15 +1,15 @@
-import Base from './Model';
+import Author from './Model';
 
 export default function getById(req, res) {
-  const baseId = req.params.baseId;
+  const authorId = req.params.authorId;
 
-  Base.findById(baseId)
+  Author.findById(authorId)
     .exec()
     .then((result) => {
       res.status(200).json(result);
     })
     .catch((err) => {
       console.log(err);
-      err.status(400).json('Base get by id error');
+      err.status(400).json('Author get by id error');
     });
 }

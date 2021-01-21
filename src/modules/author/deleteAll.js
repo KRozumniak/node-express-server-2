@@ -1,12 +1,12 @@
-import Base from './Model';
+import Author from './Model';
 
 export default function deleteAll(req, res) {
-  Base.deleteMany()
+  Author.deleteMany()
     .then((result) => {
       res.status(200).json(result);
     })
     .catch((err) => {
       console.log(err);
-      err.status(400).json('Base delete error');
+      err.status(400).json('Author delete error');
     });
 }

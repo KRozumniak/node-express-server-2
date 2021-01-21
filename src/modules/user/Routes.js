@@ -9,7 +9,7 @@ import userDeleteAll from './userDeleteAll';
 const router = Router();
 
 router.post('/', userRegister); // POST localhost:5000/user
-router.get('/', userGetAll); // GET localhost:5000/user
+router.post('/search', userGetAll); // GET localhost:5000/user
 router.get('/:userId', userGetById); // GET localhost:5000/user/5ffe6fa962657b2ea0db116b
 router.patch('/:userId', userUpdateById); // PATCH localhost:5000/user/5ffe6fa962657b2ea0db116b
 router.delete('/:userId', userDeleteById); // DELETE localhost:5000/user/5ffe6fa962657b2ea0db116b

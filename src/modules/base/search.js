@@ -1,6 +1,6 @@
 import Base from './Model';
 
-export default function getAll(req, res) {
+export default function search(req, res) {
   Base.find()
     .exec()
     .then((result) => {
@@ -8,6 +8,6 @@ export default function getAll(req, res) {
     })
     .catch((err) => {
       console.log(err);
-      err.status(400).json('Base get all error');
+      err.status(400).json('Base search error');
     });
 }
