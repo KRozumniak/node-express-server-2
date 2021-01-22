@@ -6,6 +6,7 @@ export default function create(req, res) {
     author: req.body.author,
   });
 
+
   newBook
     .save()
     .then(() => {
