@@ -9,9 +9,13 @@ const Model = new Schema(
       type: String,
       required: true,
     },
-    author: {
-      type: [String],
-    },
+    author: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Author',
+        required: false,
+      },
+    ],
   },
   { timestamp: {} },
 );

@@ -9,6 +9,13 @@ const Model = new Schema(
       type: String,
       required: true,
     },
+    book: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Book',
+        required: false,
+      },
+    ],
   },
   { timestamp: {} },
 );
