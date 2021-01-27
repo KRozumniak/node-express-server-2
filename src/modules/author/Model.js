@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
-// const { Schema } = mongoose;
-const Schema = mongoose.Schema;
+const { Schema } = mongoose;
+// const Schema = mongoose.Schema;
 
 const Model = new Schema(
   {
@@ -17,6 +17,7 @@ const Model = new Schema(
       },
     ],
   },
+
   { timestamp: {} },
 );
 
