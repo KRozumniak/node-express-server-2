@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import Book from './Model';
-import Author from '../author/Model';
+import Author from './../author/Model';
 
 export default function create(req, res) {
   const _id = new mongoose.Types.ObjectId();
@@ -18,8 +18,6 @@ export default function create(req, res) {
     Author.findById(author)
       .exec()
       .then((doc) => {
-        console.log(doc);
-
         doc.book = [...doc.book, _id];
         doc.save().catch((e) => {
           throw new Error(e);

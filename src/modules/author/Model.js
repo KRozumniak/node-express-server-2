@@ -18,7 +18,7 @@ const Model = new Schema(
     ],
   },
 
-  { timestamp: {} },
+  { timestamps: {} },
 );
 
 export default mongoose.model('Author', Model);

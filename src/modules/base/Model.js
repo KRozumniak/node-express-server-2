@@ -10,7 +10,7 @@ const Model = new Schema(
       required: true,
     },
   },
-  { timestamp: {} },
+  { timestamps: {} },
 );
 
 export default mongoose.model('Base', Model);
