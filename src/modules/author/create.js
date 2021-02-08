@@ -17,7 +17,6 @@ export default async function create(req, res) {
   console.log(promisesBookGetById);
 
   const promiseResults = await Promise.all(promisesBookGetById);
-
   console.log(promiseResults);
 
   // Check books
